@@ -434,7 +434,7 @@ in
 
 Skrip ini bekerja dalam tiga tahap utama: mengambil informasi dasar video, mengambil statistik video, dan kemudian menggabungkan keduanya menjadi satu tabel yang utuh.
 
-### 1. Fungsi `GetVideoDetails` (Mengambil Info Dasar Video)
+#### 1. Fungsi `GetVideoDetails` (Mengambil Info Dasar Video)
 Fungsi ini bertanggung jawab untuk mencari video-video terbaru dari setiap channel yang ditentukan.
 
 * **Ekstraksi Data:**
@@ -446,7 +446,7 @@ Fungsi ini bertanggung jawab untuk mencari video-video terbaru dari setiap chann
     * **VideoID:** Mengambil ID unik dari video, yang akan digunakan untuk mencari statistiknya.
     * **VideoLink:** Membuat URL YouTube lengkap yang bisa diklik untuk menonton video tersebut.
 
-### 2. Fungsi `GetVideoStatistics` (Mengambil Statistik Video)
+#### 2. Fungsi `GetVideoStatistics` (Mengambil Statistik Video)
 Setelah mendapatkan `VideoID` dari fungsi pertama, fungsi ini dipanggil untuk setiap video guna mengambil data engagement-nya.
 
 * **Ekstraksi Data:**
@@ -454,7 +454,7 @@ Setelah mendapatkan `VideoID` dari fungsi pertama, fungsi ini dipanggil untuk se
     * **Comments:** Mengambil jumlah total komentar.
     * **Views:** Mengambil jumlah total penayangan (views) video.
 
-### 3. Proses Penggabungan dan Pembuatan Tabel
+#### 3. Proses Penggabungan dan Pembuatan Tabel
 Ini adalah bagian utama di mana semua data yang telah dikumpulkan disatukan.
 
 * **Pengumpulan Data:** Pertama, skrip menjalankan fungsi `GetVideoDetails` untuk semua channel dan menggabungkan hasilnya menjadi satu daftar besar berisi semua video.
