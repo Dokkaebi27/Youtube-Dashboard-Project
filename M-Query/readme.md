@@ -52,15 +52,19 @@ This Power Query M script retrieves detailed information such as channel name, d
 Ensure you are using the unique **Channel ID** (which always starts with "UC"), not a username (@handle) or custom URL. The easiest and most accurate way to get it is as follows:
 
 1.  **Go to the YouTube Channel Page**
+   
     Visit the main page of the channel you want to track.
 
-2.  **Click the "Share channel" Button**
+3.  **Click the "Share channel" Button**
+   
     Below the channel name and above the Subscribe button, click the "more" (or three dots `⋮`) icon to open the menu, then select **"Share channel"**.
 
-3.  **Copy Channel ID**
+5.  **Copy Channel ID**
+
     A pop-up window will appear. Instead of copying the link, click the **"Copy Channel ID"** button. This will copy the unique 24-character ID directly to your clipboard.
 
-4.  **Use the Copied ID**
+7.  **Use the Copied ID**
+   
     Paste the copied ID into the `ChannelIDs_List` parameter in Power BI.
 
 ---
@@ -189,33 +193,34 @@ in
 
 This script operates in three main stages: retrieving basic video information, fetching video statistics, and then combining both into a complete table.
 
-### 1. `GetVideoDetails` Function (Retrieving Basic Video Info)
+1. `GetVideoDetails` Function (Retrieving Basic Video Info)
+   
 This function is responsible for finding the latest videos from each specified channel.
+   - **Data Extraction:**
+     - **ChannelName:** Retrieves the name of the channel from the video.
+     - **VideoTitle:** Retrieves the specific title of each video.
+     - **PublishedAt:** Retrieves the date and time the video was uploaded.
+     - **VideoDescription:** Retrieves the description text found below the video.
+     - **VideoThumbnail:** Retrieves the URL of the high-resolution video thumbnail image.
+     - **VideoID:** Retrieves the unique ID of the video, which will be used to fetch its statistics.
+     - **VideoLink:** Creates a complete, clickable YouTube URL to watch the video.
 
-* **Data Extraction:**
-    * **ChannelName:** Retrieves the name of the channel from the video.
-    * **VideoTitle:** Retrieves the specific title of each video.
-    * **PublishedAt:** Retrieves the date and time the video was uploaded.
-    * **VideoDescription:** Retrieves the description text found below the video.
-    * **VideoThumbnail:** Retrieves the URL of the high-resolution video thumbnail image.
-    * **VideoID:** Retrieves the unique ID of the video, which will be used to fetch its statistics.
-    * **VideoLink:** Creates a complete, clickable YouTube URL to watch the video.
-
-### 2. `GetVideoStatistics` Function (Retrieving Video Statistics)
+3. `GetVideoStatistics` Function (Retrieving Video Statistics)
+   
 After obtaining the `VideoID` from the first function, this function is called for each video to retrieve its engagement data.
+   - **Data Extraction:**
+     - **Likes:** Retrieves the total number of likes on the video.
+     - **Comments:** Retrieves the total number of comments.
+     - **Views:** Retrieves the total number of video views.
 
-* **Data Extraction:**
-    * **Likes:** Retrieves the total number of likes on the video.
-    * **Comments:** Retrieves the total number of comments.
-    * **Views:** Retrieves the total number of video views.
-
-### 3. Combination and Table Creation Process
+4. Combination and Table Creation Process
+   
 This is the main part where all the collected data is consolidated.
 
-* **Data Collection:** First, the script runs the `GetVideoDetails` function for all channels and combines the results into one large list of all videos.
-* **Statistics Retrieval:** Next, the script extracts the `VideoID` from each video in the list, then calls the `GetVideoStatistics` function for each ID to get the likes, comments, and views data.
-* **Table Merging:** The `List.Zip` and `Record.Combine` functions are used to "match" the basic data of each video with its statistics, forming a single complete row of data.
-* **Final Table:** Finally, all the complete data is converted into a table format, and its data types are adjusted (e.g., numbers for Likes/Views and datetime for PublishedAt) to be ready for analysis and visualization.
+   - **Data Collection:** First, the script runs the `GetVideoDetails` function for all channels and combines the results into one large list of all videos.
+   - **Statistics Retrieval:** Next, the script extracts the `VideoID` from each video in the list, then calls the `GetVideoStatistics` function for each ID to get the likes, comments, and views data.
+   - **Table Merging:** The `List.Zip` and `Record.Combine` functions are used to "match" the basic data of each video with its statistics, forming a single complete row of data.
+   - **Final Table:** Finally, all the complete data is converted into a table format, and its data types are adjusted (e.g., numbers for Likes/Views and datetime for PublishedAt) to be ready for analysis and visualization.
 
 ---
 ## 🙍 About Me  
@@ -287,16 +292,20 @@ Skrip Power Query M ini mengambil informasi terperinci seperti nama channel, des
 Pastikan Anda menggunakan **ID Channel** unik (yang selalu diawali dengan "UC"), bukan nama pengguna (@handle) atau URL kustom. Cara termudah dan paling akurat untuk mendapatkannya adalah sebagai berikut:
 
 1. **Buka Halaman Channel YouTube**
-Kunjungi halaman utama channel yang ingin Anda lacak datanya.
+   
+   Kunjungi halaman utama channel yang ingin Anda lacak datanya.
 
 2. **Klik Tombol "Bagikan channel"**
-Di bawah nama channel dan di atas tombol Subscribe, klik tulisan "selengkapnya" untuk membuka menu, lalu pilih **"Bagikan channel"**.
+   
+   Di bawah nama channel dan di atas tombol Subscribe, klik tulisan "selengkapnya" untuk membuka menu, lalu pilih **"Bagikan channel"**.
 
 3. **Salin ID Channel**
-Sebuah jendela pop-up akan muncul. Alih-alih menyalin link, klik tombol **"Salin ID Channel"** (Copy Channel ID). Ini akan menyalin ID unik 24 karakter langsung ke clipboard Anda.
+   
+      Sebuah jendela pop-up akan muncul. Alih-alih menyalin link, klik tombol **"Salin ID Channel"** (Copy Channel ID). Ini akan menyalin ID unik 24 karakter langsung ke clipboard Anda.
 
 4. **Gunakan ID yang Disalin**
-Tempelkan ID yang sudah Anda salin ke dalam parameter `ChannelIDs_List` di Power BI.
+   
+   Tempelkan ID yang sudah Anda salin ke dalam parameter `ChannelIDs_List` di Power BI.
 
 ---
 ## M Script
@@ -425,6 +434,7 @@ in
 Skrip ini bekerja dalam tiga tahap utama: mengambil informasi dasar video, mengambil statistik video, dan kemudian menggabungkan keduanya menjadi satu tabel yang utuh.
 
 1. **Fungsi `GetVideoDetails` (Mengambil Info Dasar Video)**
+   
 Fungsi ini bertanggung jawab untuk mencari video-video terbaru dari setiap channel yang ditentukan.
     - **Ekstraksi Data:**
       - **ChannelName:** Mengambil nama channel dari video.
@@ -435,14 +445,16 @@ Fungsi ini bertanggung jawab untuk mencari video-video terbaru dari setiap chann
       - **VideoID:** Mengambil ID unik dari video, yang akan digunakan untuk mencari statistiknya.
       - **VideoLink:** Membuat URL YouTube lengkap yang bisa diklik untuk menonton video tersebut.
 
-2. **Fungsi `GetVideoStatistics` (Mengambil Statistik Video)**
+3. **Fungsi `GetVideoStatistics` (Mengambil Statistik Video)**
+   
 Setelah mendapatkan VideoID dari fungsi pertama, fungsi ini dipanggil untuk setiap video guna mengambil data engagement-nya.
     - **Ekstraksi Data:**
       - **Likes:** Mengambil jumlah "suka" (likes) pada video.
       - **Comments:** Mengambil jumlah total komentar.
       - **Views:** Mengambil jumlah total penayangan (views) video.
         
-3. **Proses Penggabungan dan Pembuatan Tabel**
+4. **Proses Penggabungan dan Pembuatan Tabel**
+   
 Ini adalah bagian utama di mana semua data yang telah dikumpulkan disatukan.
     - **Pengumpulan Data:** Pertama, skrip menjalankan fungsi `GetVideoDetails` untuk semua channel dan menggabungkan hasilnya menjadi satu daftar besar berisi semua video.
     - **Pengambilan Statistik:** Selanjutnya, skrip mengambil `VideoID` dari setiap video dalam daftar tersebut, lalu memanggil fungsi GetVideoStatistics untuk masing-masing ID guna mendapatkan data likes, comments, dan views.
