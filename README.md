@@ -112,7 +112,7 @@ Hi, I'm **Ahmad Zaki Amani** 👋  
 # 📊 Dasbor Analisis Channel Youtube 
 
 ---
-Selamat datang di repositori **YouTube Channel Analytics Dashboard** 🚀
+Selamat datang di repositori **Dasbor Analisis Channel Youtube** 🚀
 
 Repositori ini menampilkan **dashboard interaktif YouTube** yang dibangun menggunakan **Power BI**. Proyek ini dirancang untuk melacak, memvisualisasikan, dan membandingkan performa beberapa channel YouTube dalam satu antarmuka terpadu.
 
