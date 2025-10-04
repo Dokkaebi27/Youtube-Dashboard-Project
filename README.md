@@ -109,7 +109,7 @@ Hi, I'm **Ahmad Zaki Amani** 👋  
 
 ---
 <a name="indonesian-version"></a>
-# 📊 Dasbor Analisis Channel Youtube Dashboard
+# 📊 Dasbor Analisis Channel Youtube 
 
 ---
 Selamat datang di repositori **YouTube Channel Analytics Dashboard** 🚀
