@@ -236,13 +236,13 @@ Hi, I'm **Ahmad Zaki Amani** 👋
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmad-zaki-amani-ab091635b/)  
 
 ---
-<a name="indonesian-version"></a>
-# 📊 Detail Channel YouTube dengan Power BI + YouTube API
-
 🌐 Languages: [English](#english-version) | [Bahasa Indonesia](#indonesian-version)
 
 ---
+<a name="indonesian-version"></a>
+# 📊 Detail Channel YouTube dengan Power BI + YouTube API
 
+---
 Proyek ini mendemonstrasikan cara mengintegrasikan **data Channel YouTube** ke dalam **Power BI** menggunakan **YouTube Data API v3** secara langsung.
 
 Skrip Power Query M ini mengambil informasi terperinci seperti nama channel, deskripsi, jumlah subscriber, dan gambar profil untuk daftar channel yang telah ditentukan.
