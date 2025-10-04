@@ -193,7 +193,7 @@ in
 
 This script operates in three main stages: retrieving basic video information, fetching video statistics, and then combining both into a complete table.
 
-1. `GetVideoDetails` Function (Retrieving Basic Video Info)
+#### 1. `GetVideoDetails` Function (Retrieving Basic Video Info)
    
 This function is responsible for finding the latest videos from each specified channel.
    - **Data Extraction:**
@@ -205,7 +205,7 @@ This function is responsible for finding the latest videos from each specified c
      - **VideoID:** Retrieves the unique ID of the video, which will be used to fetch its statistics.
      - **VideoLink:** Creates a complete, clickable YouTube URL to watch the video.
 
-3. `GetVideoStatistics` Function (Retrieving Video Statistics)
+#### 2. `GetVideoStatistics` Function (Retrieving Video Statistics)
    
 After obtaining the `VideoID` from the first function, this function is called for each video to retrieve its engagement data.
    - **Data Extraction:**
@@ -213,7 +213,7 @@ After obtaining the `VideoID` from the first function, this function is called f
      - **Comments:** Retrieves the total number of comments.
      - **Views:** Retrieves the total number of video views.
 
-4. Combination and Table Creation Process
+#### 3. Combination and Table Creation Process
    
 This is the main part where all the collected data is consolidated.
 
