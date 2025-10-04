@@ -4,7 +4,6 @@
 <a name="english-version"></a>
 # 📊 YouTube Channel Analytics Dashboard
 
----
 Welcome to the **YouTube Channel Analytics Dashboard** repository 🚀 
 
 This repository showcases an interactive YouTube dashboard built using Power BI. The project is designed to track, visualize, and compare the performance of multiple YouTube channels in a single, unified interface.
@@ -113,7 +112,6 @@ Hi, I'm **Ahmad Zaki Amani** 👋  
 <a name="indonesian-version"></a>
 # 📊 Dasbor Analisis Channel Youtube 
 
----
 Selamat datang di repositori **Dasbor Analisis Channel Youtube** 🚀
 
 Repositori ini menampilkan **dashboard interaktif YouTube** yang dibangun menggunakan **Power BI**. Proyek ini dirancang untuk melacak, memvisualisasikan, dan membandingkan performa beberapa channel YouTube dalam satu antarmuka terpadu.
