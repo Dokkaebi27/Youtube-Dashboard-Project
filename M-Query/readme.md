@@ -1,6 +1,9 @@
-# 📊 YouTube Channel Details with Power BI + YouTube API
+🌐 Languages: [English](#english-version) | [Bahasa Indonesia](#indonesian-version)
 
-🌐 Languages: [English](#YouTube-Channel) | [Bahasa Indonesia](#bahasa-indonesia)
+---
+
+<a name="english-version"></a>
+# 📊 YouTube Channel Details with Power BI + YouTube API
 
 ---
 This project demonstrates how to integrate **YouTube Channel data** into **Power BI** directly using the **YouTube Data API v3**.
@@ -234,12 +237,11 @@ Hi, I'm **Ahmad Zaki Amani** 👋
 
 ---
 <a name="indonesian-version"></a>
-# 📊 YouTube Channel Details with Power BI + YouTube API
+# 📊 Detail Channel YouTube dengan Power BI + YouTube API
 
 🌐 Languages: [English](#english-version) | [Bahasa Indonesia](#indonesian-version)
 
 ---
-## Bahasa Indonesia
 
 Proyek ini mendemonstrasikan cara mengintegrasikan **data Channel YouTube** ke dalam **Power BI** menggunakan **YouTube Data API v3** secara langsung.
 
