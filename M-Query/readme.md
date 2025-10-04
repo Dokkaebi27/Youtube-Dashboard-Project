@@ -429,38 +429,42 @@ in
 ```
 
 ---
+---
 ## 📌 Penjelasan M Script
 
 Skrip ini bekerja dalam tiga tahap utama: mengambil informasi dasar video, mengambil statistik video, dan kemudian menggabungkan keduanya menjadi satu tabel yang utuh.
 
-1. **Fungsi `GetVideoDetails` (Mengambil Info Dasar Video)**
-   
+### 1. Fungsi `GetVideoDetails` (Mengambil Info Dasar Video)
 Fungsi ini bertanggung jawab untuk mencari video-video terbaru dari setiap channel yang ditentukan.
-    - **Ekstraksi Data:**
-      - **ChannelName:** Mengambil nama channel dari video.
-      - **VideoTitle:** Mengambil judul spesifik dari setiap video.
-      - **PublishedAt:** Mengambil tanggal dan waktu video tersebut diunggah.
-      - **VideoDescription:** Mengambil teks deskripsi yang ada di bawah video.
-      - **VideoThumbnail:** Mengambil URL gambar thumbnail video dalam resolusi tinggi.
-      - **VideoID:** Mengambil ID unik dari video, yang akan digunakan untuk mencari statistiknya.
-      - **VideoLink:** Membuat URL YouTube lengkap yang bisa diklik untuk menonton video tersebut.
 
-3. **Fungsi `GetVideoStatistics` (Mengambil Statistik Video)**
-   
-Setelah mendapatkan VideoID dari fungsi pertama, fungsi ini dipanggil untuk setiap video guna mengambil data engagement-nya.
-    - **Ekstraksi Data:**
-      - **Likes:** Mengambil jumlah "suka" (likes) pada video.
-      - **Comments:** Mengambil jumlah total komentar.
-      - **Views:** Mengambil jumlah total penayangan (views) video.
-        
-4. **Proses Penggabungan dan Pembuatan Tabel**
-   
+* **Ekstraksi Data:**
+    * **ChannelName:** Mengambil nama channel dari video.
+    * **VideoTitle:** Mengambil judul spesifik dari setiap video.
+    * **PublishedAt:** Mengambil tanggal dan waktu video tersebut diunggah.
+    * **VideoDescription:** Mengambil teks deskripsi yang ada di bawah video.
+    * **VideoThumbnail:** Mengambil URL gambar thumbnail video dalam resolusi tinggi.
+    * **VideoID:** Mengambil ID unik dari video, yang akan digunakan untuk mencari statistiknya.
+    * **VideoLink:** Membuat URL YouTube lengkap yang bisa diklik untuk menonton video tersebut.
+
+### 2. Fungsi `GetVideoStatistics` (Mengambil Statistik Video)
+Setelah mendapatkan `VideoID` dari fungsi pertama, fungsi ini dipanggil untuk setiap video guna mengambil data engagement-nya.
+
+* **Ekstraksi Data:**
+    * **Likes:** Mengambil jumlah "suka" (likes) pada video.
+    * **Comments:** Mengambil jumlah total komentar.
+    * **Views:** Mengambil jumlah total penayangan (views) video.
+
+### 3. Proses Penggabungan dan Pembuatan Tabel
 Ini adalah bagian utama di mana semua data yang telah dikumpulkan disatukan.
-    - **Pengumpulan Data:** Pertama, skrip menjalankan fungsi `GetVideoDetails` untuk semua channel dan menggabungkan hasilnya menjadi satu daftar besar berisi semua video.
-    - **Pengambilan Statistik:** Selanjutnya, skrip mengambil `VideoID` dari setiap video dalam daftar tersebut, lalu memanggil fungsi GetVideoStatistics untuk masing-masing ID guna mendapatkan data likes, comments, dan views.
-    - **Penggabungan Tabel:** Fungsi `List.Zip` dan `Record.Combine` digunakan untuk "mencocokkan" data dasar setiap video dengan data statistiknya, sehingga menjadi satu baris data yang lengkap.
-    - **Tabel Akhir:** Terakhir, semua data yang sudah lengkap diubah menjadi format tabel dan tipe datanya disesuaikan (misalnya, angka untuk Likes/Views dan tanggal untuk PublishedAt) agar siap untuk dianalisis dan divisualisasikan.
 
+* **Pengumpulan Data:** Pertama, skrip menjalankan fungsi `GetVideoDetails` untuk semua channel dan menggabungkan hasilnya menjadi satu daftar besar berisi semua video.
+
+* **Pengambilan Statistik:** Selanjutnya, skrip mengambil `VideoID` dari setiap video dalam daftar tersebut, lalu memanggil fungsi `GetVideoStatistics` untuk masing-masing ID guna mendapatkan data likes, comments, dan views.
+
+* **Penggabungan Tabel:** Fungsi `List.Zip` dan `Record.Combine` digunakan untuk "mencocokkan" data dasar setiap video dengan data statistiknya, sehingga menjadi satu baris data yang lengkap.
+
+* **Tabel Akhir:** Terakhir, semua data yang sudah lengkap diubah menjadi format tabel dan tipe datanya disesuaikan (misalnya, angka untuk Likes/Views dan tanggal untuk PublishedAt) agar siap untuk dianalisis dan divisualisasikan.
+  
 ---
 
 ## 🙍 Tentang Saya
