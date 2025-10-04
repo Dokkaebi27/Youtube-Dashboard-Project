@@ -41,17 +41,19 @@ The primary goal is to create a **personal analytics dashboard** that transforms
 
 Based on the dashboard screens, the goals include:
 
-
+---
  🏠 **Home Page**
 - To provide a centralized hub to get a quick overview of a **selected channel's activity, key stats, and recent video uploads.**
-
-
+  
+---
 📹 **Video Page**
 - To enable a deep-dive analysis of individual videos to understand what specific content drives **high engagement (views, likes, comments).**
 
+---
 ⚔️ **Channel vs Channel Page**  
 - To facilitate an **easy and direct visual comparison between any two channels** from the subscription list, focusing on key metrics like subscriber count.
 
+---
 💡 **Decision Support**
 - Identify which subscribed creators are currently **the most active or growing the fastest.**
 - Discover trending topics or video formats among the group of followed channels.
@@ -76,11 +78,11 @@ YouTube-Dashboard-Project/
 │   ├── Video.png
 │   └── Channel vs Channel.png       
 │
-├── PowerBI/  
+├── power bi/  
 │   └── YouTube Dashboard.pbix     # Main Power BI dashboard file
 │
 ├── M-Query/
-|   └── YouTube API Query.txt      # Power Query M scripts for API calls
+|   └── README.md                  # Power Query M scripts for API calls
 │
 ├── README.md                      # Main repository documentation
 ```
@@ -191,17 +193,17 @@ Berdasarkan tampilan dashboard, tujuannya mencakup:
 ```
 YouTube-Dashboard-Project/
 │
-├── Docs/                         # Screenshot & dokumentasi proyek
+├── docs/                         # Screenshot & dokumentasi proyek
 │   ├── Youtube Dashboard.pdf 
 │   ├── Home.png
 │   ├── Video.png
 │   └── Channel vs Channel.png       
 │
-├── PowerBI/  
+├── powerBI/  
 │   └── Youtube Dashboard.pbix     # File utama dashboard Power BI
 │
 ├── M-Query/
-|   └── YouTube API Query.txt      # Skrip Power Query M untuk panggilan API
+|   └── README.md                 # Skrip Power Query M untuk panggilan API
 │
 ├── README.md                      # Dokumentasi utama repositori
 ```
