@@ -86,29 +86,6 @@ YouTube-Dashboard-Project/
 ```
 
 ---
-## 🔧 How to Change Monitored Channels in Power BI  
-
-To customize the dashboard to track different YouTube channels, you can modify the channel list parameter in **Power Query Editor**.  
-
-### Steps  
-1.  Open **Power Query Editor**  
-    * Go to the **Home** tab in Power BI Desktop.  
-    * Click **Transform Data** → **Transform Data**.  
-
-2.  Locate the **ChannelIDs Parameter**  
-    * On the left "Queries" panel, look for a parameter or a list named something like `ChannelIDs` or `Channel List`.
-    * This list will contain the unique IDs of the channels currently being tracked (e.g., `UCoIiiHof6BJ85PLuLkuxuhw`).
-
-3.  Update the Channel List
-    * Select the query containing the channel IDs.
-    * Click the **"Source"** step in the "Applied Steps" on the right. You should see the list of IDs.
-    * Replace the existing IDs with the new channel IDs you want to track. *(You can find a channel's ID in the URL of its homepage, e.g., `youtube.com/channel/UC...`)*.
-
-4.  Apply the Changes  
-    * Click **Close & Apply** on the top-left to save the changes and refresh the data model.  
-    * The dashboard will now update automatically to pull data from the new set of channels.
-
----
 ## 🙍 About Me  
 
 Hi, I'm **Ahmad Zaki Amani** 👋  
@@ -222,31 +199,6 @@ YouTube-Dashboard-Project/
 │
 ├── README.md                      # Dokumentasi utama repositori
 ```
-
----
-
-## 🔧 Cara Mengubah Channel yang Dipantau di Power BI
-
-Untuk menyesuaikan dashboard agar melacak channel YouTube yang berbeda, Anda dapat mengubah parameter daftar channel di **Power Query Editor**.
-
-## Langkah-langkah
-
-1.  Buka **Power Query Editor**
-    * Pergi ke tab **Home** di Power BI Desktop.
-    * Klik **Transform Data** → **Transform Data**.
-
-2.  Temukan **Parameter ChannelIDs**
-    * Di panel "Queries" sebelah kiri, cari parameter atau daftar yang bernama seperti `ChannelIDs` atau `Daftar Channel`.
-    * Daftar ini akan berisi ID unik dari channel yang sedang dilacak (contoh: `UCoIiiHof6BJ85PLuLkuxuhw`).
-
-3.  Perbarui Daftar Channel
-    * Pilih query yang berisi ID channel.
-    * Klik langkah **"Source"** di panel "Applied Steps" di sebelah kanan. Anda akan melihat daftar ID tersebut.
-    * Ganti ID yang ada dengan ID channel baru yang ingin Anda lacak. *(Anda dapat menemukan ID channel di URL halaman utamanya, misal: `youtube.com/channel/UC...`)*.
-
-4.  Terapkan Perubahan
-    * Klik **Close & Apply** di kiri atas untuk menyimpan perubahan dan menyegarkan model data.
-    * Dashboard akan secara otomatis diperbarui untuk mengambil data dari daftar channel yang baru.
 
 ---
 
